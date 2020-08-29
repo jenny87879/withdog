@@ -1,6 +1,6 @@
 import pprint
 
-# import requests
+
 # from pymongo import MongoClient
 
 from flask import Flask, render_template, jsonify, request
@@ -16,7 +16,8 @@ def home():
 
 @app.route('/place_save')
 def move_page():
-    return render_template('place save.html', title='장소 저장')
+    return render_template('place_save.html', title='장소 저장')
+    print('title')
 
 
 # client = MongoClient(sss'localhost', 27017)

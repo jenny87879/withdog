@@ -15,19 +15,48 @@
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
             crossorigin="anonymous"></script>
 
-    <title></title>
+    <title>같이 여행가자</title>
+
+        <script>
+        $(document).ready(function() {
+            const urlParams = new URLSearchParams(location.search);
+            const title = urlParams.get('title');
+            $('#space-title').html(title);
+        });
+    </script>
+
+            <style type="text/css">
+
+            .wrap {
+                width: 900px;
+                margin: auto;
+            }
+            #map {
+            width: 700px;
+            height: 500px;
+            margin: 50px auto 50px auto;
+            }
+            #card-box {
+                text-align: left;
+            }
+
+        </style>
+
 
 </head>
 <body>
-<form>
-  <fieldset disabled>
-    <div class="form-group" disabled>
-      <label for="disabledTextInput">장소명</label>
-      <input type="text" id="disabledTextInput" class="form-control" placeholder=title>
-    </div>
-  </fieldset>
-    <button type="submit" class="btn btn-primary">Submit</button>
 
-</form>
+    <div class = "wrap">
+        <h5 class="display-4">새로운 장소 저장</h5>
+        <fieldset disabled>
+            <div class="form-group" disabled>
+                <label for="disabledTextInput">장소명: <span id="space-title"></span></label>
+                <input type="text" id="disabledTextInput" class="form-control" placeholder=title>
+            </div>
+        </fieldset>
+        <button type="submit" class="btn btn-primary">저장하기</button>
+
+
+</div>
 </body>
 </html>

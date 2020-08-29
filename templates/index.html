@@ -66,11 +66,11 @@
                                         <div class="row no-gutters">
                                         <div class="col-md-8" >
                                         <div class="card-body">
-                                            <h5 class="card-title" id="title">${title}</h5>
+                                            <h5 class="card-title">${title}</h5>
 
-                                            <p class="card-text" id="roadAddress">${roadAddress}</p>
-                                            <p class="card-text"><small class="text-muted" id="category">${category}</small></p>
-                                            <button class="btn btn-primary" type="button" onclick="movePage()">검색</button>
+                                            <p class="card-text" >${roadAddress}</p>
+                                            <p class="card-text"><small class="text-muted">${category}</small></p>
+                                            <button class="btn btn-primary" type="button" onclick="movePage('${title}')">해당 장소로 장소 입력하기</button>
                                         </div>
                                         </div>
                                         </div>
@@ -81,11 +81,9 @@
                     }
                 })
             }
-
-            function PlaceSaveHtml() {
-
-                }}
-
+            function movePage(title) {
+                location.href = `/place_save?title=${title}`;
+            }
 
         </script>
 
