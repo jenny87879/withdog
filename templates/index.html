@@ -30,6 +30,7 @@
                 text-align: left;
             }
 
+
         </style>
 
 
@@ -69,7 +70,7 @@
 
                                             <p class="card-text" id="roadAddress">${roadAddress}</p>
                                             <p class="card-text"><small class="text-muted" id="category">${category}</small></p>
-                                            <a href="#" class="btn btn-primary">선택</a>
+                                            <button class="btn btn-primary" type="button" onclick="location.href='place_save.html'">검색</button>
                                         </div>
                                         </div>
                                         </div>
@@ -80,12 +81,10 @@
                     }
                 })
             }
-            $('#search').click(function(){
 
-                num=1;
-                var searchWord = $('#category').val();
-                requestAjax(searchWord);
-            });
+            function PlaceSaveHtml() {
+
+                }}
 
 
         </script>
@@ -105,12 +104,5 @@
         <div id="card-box"></div>
 
 
-         <div style="margin: auto" class="card w-50">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Button</a>
-                </div>
-        </div>
     </body>
 </html>
