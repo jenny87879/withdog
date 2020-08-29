@@ -1,6 +1,6 @@
 import pprint
 
-#import requests
+# import requests
 # from pymongo import MongoClient
 
 from flask import Flask, render_template, jsonify, request
@@ -12,6 +12,11 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return render_template('index.html')
+
+
+@app.route('/place_save')
+def move_page():
+    return render_template('place save.html', title='장소 저장')
 
 
 # client = MongoClient(sss'localhost', 27017)
@@ -31,7 +36,7 @@ def get_place():
     client_id = "1Xsii9AuUSgWE7d_7Fuh"
     client_secret = "It9yaARp4U"
     keyword = place
-    api_url = "https://openapi.naver.com/v1/search/local.json?query=" + keyword +"&display=500&start=1&sort=comment"
+    api_url = "https://openapi.naver.com/v1/search/local.json?query=" + keyword + "&display=500&start=1&sort=comment"
     # 아이디와 시크릿 키를 부가 정보로 같이 보냅니다.
     headers = {'X-Naver-Client-Id': client_id, 'X-Naver-Client-Secret': client_secret}
     # 검색 결과를 data에 저장합니다.
