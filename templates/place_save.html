@@ -24,6 +24,9 @@
             $('#SearchWord').html(title);
         });
 
+        function saveButton() {
+             alert("저장하겠습니다.")
+        }
 
 
     </script>
@@ -67,17 +70,17 @@
 
 <div class = "wrap">
     <h5 class="display-4">새로운 장소 저장</h5>
-    <h3>장소 및 위치: <span id="SearchWord"></span></h3>
+    <h5>장소 및 위치: <span id="SearchWord"></span></h5>
 
     <div class = "saveBox">
         <form>
             <div class="form-group">
                 <label for="formGroupExampleInput">영업시간</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="ex) 오전 1시 ~ 오후 7시">
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="ex) 오전 11시 ~ 오후 7시">
             </div>
             <div class="form-group">
                 <label for="formGroupExampleInput2">금액</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="보호자 입장료 10000원 소형견 입장료 5000원">
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="ex) 보호자 입장료 10000원 소형견 입장료 5000원">
             </div>
             <div class="form-group">
                 <label for="formGroupExampleInput2">세부 옵션</label> <br>
@@ -112,7 +115,7 @@
 
 
         </div>
-    <button type="submit" class="btn btn-primary"  >저장하기</button>
+    <button type="submit" class="btn btn-primary" onclick=saveButton()>저장하기</button>
 
 
 </div>
