@@ -19,7 +19,7 @@
 
             .wrap {
                 width: 900px;
-                margin: auto;
+                margin: 100px auto;
             }
             #map {
             width: 700px;
@@ -58,19 +58,19 @@
                                 let category = getPlace[i]['category']
                                 let roadAddress = getPlace[i]['roadAddress']
                                 let title = getPlace[i]['title']
-                                let mapx = getPlace[i]['mapx']
-                                let mapy = getPlace[i]['mapy']
+                                let address = getPlace[i]['address']
+
                                 console.log(title)
                                 let tempHtml = `
-+                                       <div class="card mb-3" style="max-width: 800px; margin: auto" >
+                                       <div class="card mb-3" style="max-width: 800px; margin: auto" >
                                         <div class="row no-gutters">
                                         <div class="col-md-8" >
                                         <div class="card-body">
                                             <h5 class="card-title">${title}</h5>
-
                                             <p class="card-text" >${roadAddress}</p>
+                                            <p class="card-text" >${address}</p>
                                             <p class="card-text"><small class="text-muted">${category}</small></p>
-                                            <button class="btn btn-primary" type="button" onclick="movePage('${title}')">해당 장소로 장소 입력하기</button>
+                                            <button class="btn btn-primary" type="button" onclick="movePage('${title},${address}')">해당 장소로 장소 입력하기</button>
                                         </div>
                                         </div>
                                         </div>
@@ -89,7 +89,7 @@
 
     </head>
 
-    <body>
+    <body style="background-color: #f5f5dc">
         <div class = "wrap">
         <h5 class="display-4">강아지와 함께하는 장소 검색</h5>
             <div class="input-group mb-3">
@@ -98,8 +98,9 @@
                     <button class="btn btn-primary btn-lg active" type="button" onclick="searchPlace()">검색</button>
                 </div>
             </div>
+            <div id="card-box"></div>
         </div>
-        <div id="card-box"></div>
+
 
 
     </body>

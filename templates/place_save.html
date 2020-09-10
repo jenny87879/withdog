@@ -17,44 +17,102 @@
 
     <title>같이 여행가자</title>
 
-        <script>
+    <script>
         $(document).ready(function() {
             const urlParams = new URLSearchParams(location.search);
             const title = urlParams.get('title');
-            $('#space-title').html(title);
+            $('#SearchWord').html(title);
         });
+
+
+
     </script>
 
-            <style type="text/css">
+    <style type="text/css">
 
-            .wrap {
-                width: 900px;
-                margin: auto;
-            }
-            #map {
+        .wrap {
+            position: relative;
+            padding: 28px 28px 28px 28px;
+            border: 1px solid #e5e5e5;
+            background-color: #fff;
+
+            width: 900px;
+            margin: 100px auto;
+
+        }
+        .saveBox {
+            position: relative;
+            padding: 10px 10px 10px 10px;
+            border: 1px solid #e5e5e5;
+            background-color: #fff;
+
+
+
+        }
+        #map {
             width: 700px;
             height: 500px;
             margin: 50px auto 50px auto;
-            }
-            #card-box {
-                text-align: left;
-            }
+        }
+        #card-box {
+            text-align: left;
+        }
 
-        </style>
+    </style>
 
 
 </head>
-<body>
 
-    <div class = "wrap">
-        <h5 class="display-4">새로운 장소 저장</h5>
-        <fieldset disabled>
-            <div class="form-group" disabled>
-                <label for="disabledTextInput">장소명: <span id="space-title"></span></label>
-                <input type="text" id="disabledTextInput" class="form-control" placeholder=title>
+<body style="background-color: #f5f5dc">
+
+<div class = "wrap">
+    <h5 class="display-4">새로운 장소 저장</h5>
+    <h3>장소 및 위치: <span id="SearchWord"></span></h3>
+
+    <div class = "saveBox">
+        <form>
+            <div class="form-group">
+                <label for="formGroupExampleInput">영업시간</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="ex) 오전 1시 ~ 오후 7시">
             </div>
-        </fieldset>
-        <button type="submit" class="btn btn-primary">저장하기</button>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">금액</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="보호자 입장료 10000원 소형견 입장료 5000원">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">세부 옵션</label> <br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">카페</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">운동장</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">병원</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">관광지</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">공원</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">숙박</label>
+                </div>
+
+            </div>
+        </form>
+
+
+
+        </div>
+    <button type="submit" class="btn btn-primary"  >저장하기</button>
 
 
 </div>
